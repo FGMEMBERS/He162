@@ -1,0 +1,315 @@
+<!--  Heinkel 162 Salamander / Volksjaeger
+
+      This version of the Volksjaeger tries to match the Heinkel 162-A
+      as described by Captain Eric Brown, CBE, DSC, AFC, RN in :
+
+	  Wings of the Luftwaffe
+	  Eric Brown
+	  Pilot Press
+	  ISBN 1-85310-413-2
+
+      So its not a Supperwaffe, enabling green pilots with 10 hours
+      glider practice in Hitlerjugend to win back the sky. Its not
+      flying 450knots, it needs more than 500m for takeoff and its
+      difficult to land.
+
+ 10.25 hours on the morning of 7 September 1945 He 162A-2 Werk-Nr 120098
+    taxi by using differential brakes with nearly idle throttle nozzle A
+    lift nose at: 170km/h  92knots 105mph 9500rpm nozzle S
+    take off at:  190km/h 103knots 118mph 9500rpm
+    climb at:     346km/h 187knots 215mph 9200rpm 
+[1] cruise at:    483km/h 261knots 300mph 8900rpm 5000ft
+    climb to:                                     30000ft, nozzle H
+    powered dive: 644km/h 347knots 400mph 8200rpm          nozzle S
+[2] level at:     560km/h 302knots 348mph 9500rpm 12000ft, nozzle F
+    stall at:     160km/h  86knots 100mph 3000rpm clean
+[3] stall at:     140km/h  75knots  86mph 3000rpm flaps
+    approach at:  200km/h 108knots 125mph 3000rpm gear, flaps, nozzle A
+    touchdown at: 170km/h  92knots 105mph 3000rpm aoa 1, nozzle A
+    good braking action after touchdown
+
+[1] Here my He162 is a faster than the flight report. The reason might
+    be a different power distribution of the engine.
+[2] This is the match point I used for the flight tests. I deceided
+    on cruise level of 19500ft and a cruise speed for the YASim solver,
+    so I could meet this level speed configuarion in flight test.
+[3] This is the configuration I used for the YASim solver.
+
+      You might claim, that Captain Eric Brown did not used a best and
+      fresh engine. But I tried on an FDM with 450KTAS cruise, and it
+      resulted in a plane, with a drag factor like a needle and a
+      lift like a glider. It was impossible to takeoff because of the
+      tendency of oscillating yaw with the result of ground rolls and
+      even more impossible to land.
+
+      Vivian and me came up with the same solution as the Heinkel team.
+
+  " Removing some of the dihedral would have likely cured the problem,
+    but with the production of the wings already underway there wasn't
+    much they could do about it. Instead the wing tip droops were added
+    to give the plane more vertical surface, but it wasn't enough. An
+    additional attempt was made to solve the problem by adding a lead
+    plug in the nose. The added weight was supposed to give the plane
+    more angular inertia and damp out any oscillations, but it too seems
+    to have had little effect.
+
+    On the other hand the lead plug made the plane nose heavy. Combine
+    this with the high mounted engine that wants to push the nose
+    down, and you end up having serious problems trying to get off
+    the ground. The 500m takeoff distance was out of the question,
+    and in fact the plane needed to get over 180km/h before it could be
+    lifted off. " Maury Markowitz
+
+      The Heinkel is a joy to fly, once in the air. It has much of
+      a trainer, because of the high dihedral and incidence. The
+      controls are smooth but effective. This delightful little
+      aeroplane spells the pleasures of the phenomenal roll rate.
+      The roll rate had been best of its time, the highest outside
+      the realm of hydraulically-powered ailerons. But female stalls
+      and loopings and are not its strength. 
+
+  " I pulled the He 162 into a loop. It skimmed round but I had the
+    inescapable feeling that I was playing pretty close to the minimum
+    speed for this particular maneuver. Finally, I tried a few stalls to
+    get the feel of things before landing. As the stall was approached
+    a gentle lateral lurching and some mild elevator buffet set in,
+    being followed by a mild porpoising motion before the nose pitched
+    down indicating stall had been reached. " Captain Eric Brown
+
+      The main problem of the Heinkel Volksjaeger is the engine mount
+      on top of the wing. This is a great problem in dogfights as its
+      limiting the visibility backwards. It also makes an approach to
+      land a one way shot! You need full flaps, zero throttle and a
+      controlled stall to reduce speed on approach. But opening the
+      throttle again, if you think you are to low or to slow will
+      result in crash, as more thrust will push the nose down.
+
+      Michael Koehne
+-->
+
+<airplane mass="3666">
+
+<!-- Approach configuration 
+  touching tail would be aoa=12 ... i guess approach is half of this
+  stall 160km/h 86knots clean
+  stall 140km/h 75knots with flaps and gear ... aoa 6
+ -->
+<approach speed="75" aoa="6" fuel="0.2">
+  <control-setting axis="/controls/engines/engine[0]/throttleX" value="0.2"/>
+  <control-setting axis="/controls/flight/flaps" value="1"/>
+  <control-setting axis="/controls/gear/gear-down" value="1"/>
+  <solve-weight idx="0" weight="170"/>
+</approach>
+
+<!-- Cruise configuration
+  275kias @ 19500ft ~ 375ktas
+
+  flight test :
+    S   500ft  9600rpm 375kias 695kph ~ 378.8ktas 701.4kph
+    F   500ft  9300rpm 367kias 680kph ~ 370.7ktas 686.5kph
+
+    S  2000ft  9600rpm 366kias 675kph ~ 378.1ktas 700.2kph
+    F  2000ft  9300rpm 357kias 660kph ~ 368.8ktas 683.0kph
+    F  2000ft  8900rpm 350kias 650kph ~ 361.6ktas 669.6kph * to high
+
+    F  5000ft  8900rpm 332kias 615kph ~ 359.6ktas 665.9kph
+    F  5000ft  9400rpm 342kias 635kph ~ 370.4ktas 686.0kph
+
+    F 12000ft  9500rpm 304kias 563kph ~ 364.8ktas 675.6kph * matches report
+    F 19500ft  9600rpm 269kias 500kph ~ 363.1ktas 672.6kph
+
+    H 30000ft 10200rpm 227kias 420kph ~ 354.1ktas 655.8kph
+    H 36000ft 10400rpm 202kias 375kph ~ 339.4ktas 628.5kph
+  -->
+<cruise speed="375" alt="19500" fuel="0.5">
+  <control-setting axis="/controls/engines/engine[0]/throttleX" value="0.95"/>
+  <control-setting axis="/controls/flight/flaps" value="0.0"/>
+  <control-setting axis="/controls/gear/gear-down" value="0"/>
+  <solve-weight idx="0" weight="170"/>
+</cruise>
+
+<cockpit x="1.85" y="0.0" z="0.30"/>
+<weight x="2.00" y="0" z="-0.20" mass-prop="/yasim/he162/pilot-lb"/>
+<ballast x="3.9" y="0" z="-0.72" mass="350"/> <!-- 650 -->
+
+<!-- Fuselage with engine on top -->
+
+<fuselage ax="4" ay="0" az="-0.30" bx="-5.20" by="0" bz="0"
+          width="1.20" taper="0.02" midpoint="0.33"/>
+
+<fuselage ax="1.10" ay="0" az="0.72" bx="-2.25" by="0" bz="0.72"
+          width="1.10" taper="0.8" midpoint="0.33"/>
+
+<!--
+ BMW 003E
+     continuous thrust="1760" at sea level
+     max thrust="2028" for 30 seconds
+
+ n1-idle="30" n1-max="95" n2-idle="35" n2-max="103"
+
+ The throttle movement from closed to full occupied 15 seconds,
+ if the temperature limit was observed.
+ -->
+<jet x="0" y="0" z="0.72" rotate="-1"
+   n1-idle="30" n1-max="100" n2-idle="35" n2-max="105"
+   egt="850" tsfc="1.39" mass="1240" thrust="1760" >
+  <!-- control-input axis="/controls/engines/engine[0]/throttle"
+ 	 isquare="true" control="THROTTLE"/ -->
+  <control-input axis="/controls/engines/engine[0]/throttleX"
+ 	 control="THROTTLE"/>
+</jet>
+
+<wing x="-0.63" y="0.62" z="0.09"
+      length="3.60" chord="2.15" taper="0.5"
+      incidence="3" twist="-2.0"
+      sweep="-11.0" dihedral="6.0">
+  <stall aoa="16" width="3" peak="1.3"/>
+  <flap0 start="0.04" end="0.52" lift="1.3" drag="1.5"/>
+  <flap1 start="0.54" end="0.90" lift="1.5" drag="1.3"/>
+
+  <control-input axis="/controls/flight/flaps" control="FLAP0"/>
+  <control-input axis="/controls/flight/aileron" control="FLAP1"
+                 square="true" split="true"/>
+  <control-input axis="/controls/flight/aileron-trim" control="FLAP1"
+                 split="true"/>
+
+  <control-output control="FLAP0" side="left"
+                  prop="/surface-positions/left-flap-pos-norm"/>
+  <control-output control="FLAP0" side="right"
+                  prop="/surface-positions/right-flap-pos-norm"/>
+  <control-output control="FLAP1" side="left"
+                  prop="/surface-positions/left-aileron-pos-norm"/>
+  <control-output control="FLAP1" side="right"
+                  prop="/surface-positions/right-aileron-pos-norm"/>
+
+  <!-- zero to full flaps 60 seconds work
+       on the hydraulic hand pump -->
+  <control-speed control="FLAP0" transition-time="30"/>
+  <!-- control-speed control="FLAP1" transition-time="0.75"/ -->
+</wing>
+
+<!-- the anhedral wing tips -->
+<mstab x="-0.09" y="3.333" z="0.55"
+       length="0.60" chord="1.10" taper="0.50" dihedral="-6" >
+  <stall aoa="40" width="3" peak="1.3"/>
+</mstab> 
+
+<!-- big horizonal stabs -->
+<hstab x="-4.72" y="0" z="0"
+       length="1.55" chord="0.95" taper="1.0"
+       dihedral="15.0" effectiveness="2">
+  <stall aoa="20" width="3" peak="1.3"/>
+
+  <flap0 start="0.1" end="0.8" lift="1.6" drag="1.5"/>
+  <control-input axis="/controls/flight/elevator" 
+  		 square="false" control="FLAP0" />
+  <control-input axis="/controls/flight/elevator-trim"
+  		 control="FLAP0"/>
+
+  <control-output control="FLAP0" side="left"
+                  prop="/surface-positions/left-elevator-pos-norm"/>
+  <control-output control="FLAP0" side="right"
+                  prop="/surface-positions/right-elevator-pos-norm"/>
+  <!-- control-speed control="FLAP0" transition-time="0.75"/ -->
+</hstab>
+
+<!-- left vstab -->
+<vstab x="-4.72" y="1.76" z="-0.13"
+       length="1.30" chord="0.90" taper="0.9"
+       dihedral="105" >
+  <stall aoa="16" width="5" peak="1.5"/>
+  <flap0 start="0.1" end="0.9" lift="1.8" drag="1.3"/>
+  <control-input axis="/controls/flight/rudder" control="FLAP0"
+                 invert="true"/>
+  <control-input axis="/controls/flight/rudder-trim" control="FLAP0"
+                 invert="true"/>
+  <control-output control="FLAP0" prop="/surface-positions/left-rudder-pos-norm"/>
+  <!-- control-speed control="FLAP0" transition-time="0.75"/ -->
+</vstab>
+
+<!-- right vstab -->
+<vstab x="-4.72" y="-1.76" z="-0.13"
+       length="1.30" chord="0.90" taper="0.9"
+       dihedral="75" >
+  <stall aoa="16" width="5" peak="1.5"/>
+  <flap0 start="0.1" end="0.9" lift="1.8" drag="1.3"/>
+  <control-input axis="/controls/flight/rudder" control="FLAP0"
+                 invert="true"/>
+  <control-input axis="/controls/flight/rudder-trim" control="FLAP0"
+                 invert="true"/>
+  <control-output control="FLAP0" prop="/surface-positions/right-rudder-pos-norm"/>
+  <!-- control-speed control="FLAP0" transition-time="0.75"/ -->
+</vstab>
+
+<!-- alternate V tail 
+<hstab x="-4.72" y="0" z="0"
+       length="1.55" chord="0.95" taper="1.0"
+       effectiveness="2"
+       sweep="0.0" dihedral="45.0" >
+  <stall aoa="20" width="3" peak="1.3"/>
+  <flap0 start="0.1" end="0.8" lift="1.6" drag="1.5"/>
+  <control-input axis="/controls/flight/elevator" 
+  		 square="true" control="FLAP0" />
+  <control-input axis="/controls/flight/elevator-trim"
+  		 control="FLAP0"/>
+  <control-input axis="/controls/flight/rudder" control="FLAP0"
+                 square="true" invert="true" split="true"/>
+  <control-input axis="/controls/flight/rudder-trim" control="FLAP0"
+                 invert="true" split="true"/>
+  <control-output control="FLAP0" side="left"
+                  prop="/surface-positions/left-elevator-pos-norm"/>
+  <control-output control="FLAP0" side="right"
+                  prop="/surface-positions/right-elevator-pos-norm"/>
+  <control-speed control="FLAP0" transition-time="0.75"/>
+</hstab>
+-->
+
+
+<!-- Internal tanks 
+ 1*380 liter fuselage
+ 2*280 liter wings
+ -->
+<tank x="0.90" y="0"   z="-0.32" jet="true" capacity="700"/>
+<tank x="-0.30" y="-1.3" z="0.30" jet="true" capacity="400"/>
+<tank x="-0.30"  y="1.3" z="0.30" jet="true" capacity="400"/>
+
+<!-- Undercarriage -->
+<!-- nose -->
+<gear x="3.4" y="0" z="-1.50" retract-time="7" compression="0.15" >
+  <!-- spring="1.4" damp="1.4" -->
+  <control-input axis="/controls/gear/tailwheel-lock" src0="0" src1="1"
+	     dst0="1" dst1="1" control="CASTERING"/>
+  <!--
+  <control-input axis="/controls/flight/rudder" control="STEER"
+		     src0="-1.0" src1="1.0"
+		     dst0="-0.1" dst1="0.1"/>
+  -->
+  <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+  <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
+  <control-speed control="EXTEND" transition-time="7"/>
+</gear>
+
+<!-- tail -->
+<gear x="-4.72" y="0" z="-0.30" compression="0.05" />
+
+<!-- left main -->
+<gear x="-0.20" y="0.75" z="-1.30" retract-time="7"
+	compression="0.05" spring="2" damp="1.5" >
+  <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+  <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+  <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+  <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
+  <control-speed control="EXTEND" transition-time="7"/>
+</gear>
+
+<!-- right main -->
+<gear x="-0.20" y="-0.75" z="-1.30" retract-time="7"
+	compression="0.05" spring="2" damp="1.5" >
+  <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+  <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+  <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+  <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
+  <control-speed control="EXTEND" transition-time="7"/>
+</gear>
+
+</airplane>

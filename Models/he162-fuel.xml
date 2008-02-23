@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>he162-fuel.ac</path>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>minute</object-name>
+  <property>/consumables/fuel/tank/level-gal_us</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>100</ind>
+    <dep>90</dep>
+   </entry>
+  </interpolation>
+  <center>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>-0.016</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+</PropertyList>
