@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>he162-alt.ac</path>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>minute</object-name>
+  <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+  <factor>0.109728</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>panel2</object-name>
+  <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+  <factor>0.006096</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>panel3</object-name>
+  <property>/instrumentation/altimeter/setting-inhg</property>
+  <interpolation>
+   <entry>
+    <ind>27.167585</ind>
+    <dep>-186.5</dep>
+   </entry>
+   <entry>
+    <ind>29.92</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>31.892382</ind>
+    <dep>133.5</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+</PropertyList>

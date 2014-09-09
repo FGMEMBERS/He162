@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+ <path>he162-tacho.ac</path>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>minute</object-name>
+  <property>/engines/engine[0]/n1</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>120</ind>
+    <dep>300</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+</PropertyList>

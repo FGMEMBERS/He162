@@ -1,0 +1,594 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+    <path>He162.ac</path>
+
+<!-- flaps -->
+
+    <animation>
+	    <type>rotate</type>
+	    <object-name>aileronleft</object-name>
+	    <property>/surface-positions/left-aileron-pos-norm</property>
+	    <!--min-deg>0</min-deg-->
+	    <!--max-deg>360</max-deg-->
+	    <factor>20</factor>
+	    <center>
+		    <x-m>0.478292</x-m>
+		    <y-m>-2.715657</y-m>
+		    <z-m>0.462869</z-m>
+	    </center>
+	    <axis>
+		    <x>0.445088</x>
+		    <y>1.254467</y>
+		    <z>-0.082965</z>
+	    </axis>
+    </animation>
+
+    <animation>
+	    <type>rotate</type>
+	    <object-name>aileronright</object-name>
+	    <property>/surface-positions/right-aileron-pos-norm</property>
+	    <!--min-deg>0</min-deg-->
+	    <!--max-deg>360</max-deg-->
+	    <factor>20</factor>
+	    <center>
+		    <x-m>0.478292</x-m>
+		    <y-m>2.715657</y-m>
+		    <z-m>0.462869</z-m>
+	    </center>
+	    <axis>
+		    <x>-0.445088</x>
+		    <y>1.254467</y>
+		    <z>0.082965</z>
+	    </axis>
+    </animation>
+
+    <animation>
+	    <type>rotate</type>
+	    <object-name>flapleft</object-name>
+	    <property>/surface-positions/left-flap-pos-norm</property>
+	    <!--min-deg>0</min-deg-->
+	    <!--max-deg>360</max-deg-->
+	    <factor>20</factor>
+	    <center>
+		    <x-m>1.000302</x-m>
+		    <y-m>-1.246802</y-m>
+		    <z-m>0.251241</z-m>
+	    </center>
+	    <axis>
+		    <x>0.598932</x>
+		    <y>1.683243</y>
+		    <z>-0.34029</z>
+	    </axis>
+    </animation>
+
+    <animation>
+	    <type>rotate</type>
+	    <object-name>flapright</object-name>
+	    <property>/surface-positions/right-flap-pos-norm</property>
+	    <!--min-deg>0</min-deg-->
+	    <!--max-deg>360</max-deg-->
+	    <factor>20</factor>
+	    <center>
+		    <x-m>1.000302</x-m>
+		    <y-m>1.246802</y-m>
+		    <z-m>0.251241</z-m>
+	    </center>
+	    <axis>
+		    <x>-0.598932</x>
+		    <y>1.683243</y>
+		    <z>0.34029</z>
+	    </axis>
+    </animation>
+
+    <animation>
+	    <type>rotate</type>
+	    <object-name>elevatorleft</object-name>
+	    <property>/surface-positions/left-elevator-pos-norm</property>
+	    <!--min-deg>0</min-deg-->
+	    <!--max-deg>360</max-deg-->
+	    <factor>-20</factor>
+	    <center>
+		    <x-m>4.826316</x-m>
+		    <y-m>-0.731638</y-m>
+		    <z-m>0.116261</z-m>
+	    </center>
+	    <axis>
+		    <x>0</x>
+		    <y>-1.206959</y>
+		    <z>0.323404</z>
+	    </axis>
+    </animation>
+
+    <animation>
+	    <type>rotate</type>
+	    <object-name>elevatorright</object-name>
+	    <property>/surface-positions/right-elevator-pos-norm</property>
+	    <!--min-deg>0</min-deg-->
+	    <!--max-deg>360</max-deg-->
+	    <factor>-20</factor>
+	    <center>
+		    <x-m>4.826316</x-m>
+		    <y-m>0.731638</y-m>
+		    <z-m>0.116261</z-m>
+	    </center>
+	    <axis>
+		    <x>0</x>
+		    <y>-1.206959</y>
+		    <z>-0.323404</z>
+	    </axis>
+    </animation>
+
+    <animation>
+	    <type>rotate</type>
+	    <object-name>rudderll</object-name>
+	    <property>/surface-positions/left-rudder-pos-norm</property>
+	    <!--min-deg>0</min-deg-->
+	    <!--max-deg>360</max-deg-->
+	    <factor>20</factor>
+	    <center>
+		    <x-m>4.826316</x-m>
+		    <y-m>-1.660922</y-m>
+		    <z-m>0.104464</z-m>
+	    </center>
+	    <axis>
+		    <x>0</x>
+		    <y>-0.130399</y>
+		    <z>-0.486655</z>
+	    </axis>
+    </animation>
+
+    <animation>
+	    <type>rotate</type>
+	    <object-name>rudderlu</object-name>
+	    <property>/surface-positions/left-rudder-pos-norm</property>
+	    <!--min-deg>0</min-deg-->
+	    <!--max-deg>360</max-deg-->
+	    <factor>-20</factor>
+	    <center>
+		    <x-m>4.833452</x-m>
+		    <y-m>-1.482437</y-m>
+		    <z-m>0.770089</z-m>
+	    </center>
+	    <axis>
+		    <x>0.014272</x>
+		    <y>0.170818</y>
+		    <z>0.636532</z>
+	    </axis>
+    </animation>
+
+    <animation>
+	    <type>rotate</type>
+	    <object-name>rudderrl</object-name>
+	    <property>/surface-positions/right-rudder-pos-norm</property>
+	    <!--min-deg>0</min-deg-->
+	    <!--max-deg>360</max-deg-->
+	    <factor>-20</factor>
+	    <center>
+		    <x-m>4.826316</x-m>
+		    <y-m>1.660922</y-m>
+		    <z-m>0.104464</z-m>
+	    </center>
+	    <axis>
+		    <x>0</x>
+		    <y>-0.130399</y>
+		    <z>0.486655</z>
+	    </axis>
+    </animation>
+
+    <animation>
+	    <type>rotate</type>
+	    <object-name>rudderru</object-name>
+	    <property>/surface-positions/right-rudder-pos-norm</property>
+	    <!--min-deg>0</min-deg-->
+	    <!--max-deg>360</max-deg-->
+	    <factor>20</factor>
+	    <center>
+		    <x-m>4.833452</x-m>
+		    <y-m>1.482437</y-m>
+		    <z-m>0.770089</z-m>
+	    </center>
+	    <axis>
+		    <x>-0.014272</x>
+		    <y>0.170818</y>
+		    <z>-0.636532</z>
+	    </axis>
+    </animation>
+
+<!-- gear  -->
+
+    <animation>
+	    <type>rotate</type>
+	    <object-name>gearfrontcover</object-name>
+	    <property>/gear/gear[0]/position-norm</property>
+	    <!--min-deg>0</min-deg-->
+	    <!--max-deg>360</max-deg-->
+	    <interpolation>
+	       <entry> <ind>0.0</ind> <dep>0</dep> </entry>
+	       <entry> <ind>0.4</ind> <dep>-90</dep> </entry>
+	       <entry> <ind>1.0</ind> <dep>-100</dep> </entry>
+	    </interpolation>
+	    <center>
+		    <x-m>-2.716679</x-m>
+		    <y-m>-0.117143</y-m>
+		    <z-m>-0.666365</z-m>
+	    </center>
+	    <axis>
+		    <x>0.750622</x>
+		    <y>-0.032069</y>
+		    <z>-0.049645</z>
+	    </axis>
+    </animation>
+
+    <animation>
+	    <type>rotate</type>
+	    <object-name>gearfront</object-name>
+	    <property>/gear/gear[0]/position-norm</property>
+	    <!--min-deg>0</min-deg-->
+	    <!--max-deg>360</max-deg-->
+	    <interpolation>
+	       <entry> <ind>0.0</ind> <dep>-110</dep> </entry>
+	       <entry> <ind>0.5</ind> <dep>-110</dep> </entry>
+	       <entry> <ind>1.0</ind> <dep>0</dep> </entry>
+	    </interpolation>
+	    <center>
+		    <x-m>-3.392</x-m>
+		    <y-m>0</y-m>
+		    <z-m>-0.589</z-m>
+	    </center>
+	    <axis>
+		    <x>0</x>
+		    <y>0.068095</y>
+		    <z>0</z>
+	    </axis>
+    </animation>
+
+    <animation>
+	    <type>rotate</type>
+	    <object-name>gearleftcover</object-name>
+	    <property>/gear/gear[1]/position-norm</property>
+	    <!--min-deg>0</min-deg-->
+	    <!--max-deg>360</max-deg-->
+	    <interpolation>
+	       <entry> <ind>0.0</ind> <dep>0</dep> </entry>
+	       <entry> <ind>0.4</ind> <dep>100</dep> </entry>
+	       <entry> <ind>1.0</ind> <dep>110</dep> </entry>
+	    </interpolation>
+	    <center>
+		    <x-m>0.7974</x-m>
+		    <y-m>-0.462525</y-m>
+		    <z-m>-0.314969</z-m>
+	    </center>
+	    <axis>
+		    <x>-1.38216</x>
+		    <y>-0.140991</y>
+		    <z>-0.072531</z>
+	    </axis>
+    </animation>
+
+    <animation>
+	    <type>rotate</type>
+	    <object-name>gearrightcover</object-name>
+	    <property>/gear/gear[2]/position-norm</property>
+	    <!--min-deg>0</min-deg-->
+	    <!--max-deg>360</max-deg-->
+	    <factor>110</factor>
+	    <interpolation>
+	       <entry> <ind>0.0</ind> <dep>0</dep> </entry>
+	       <entry> <ind>0.4</ind> <dep>100</dep> </entry>
+	       <entry> <ind>1.0</ind> <dep>110</dep> </entry>
+	    </interpolation>
+	    <center>
+		    <x-m>0.7974</x-m>
+		    <y-m>0.462525</y-m>
+		    <z-m>-0.314969</z-m>
+	    </center>
+	    <axis>
+		    <x>1.38216</x>
+		    <y>-0.140991</y>
+		    <z>0.072531</z>
+	    </axis>
+    </animation>
+
+    <animation>
+	    <type>rotate</type>
+	    <object-name>gearleft</object-name>
+	    <property>/gear/gear[1]/position-norm</property>
+	    <!--min-deg>0</min-deg-->
+	    <!--max-deg>360</max-deg-->
+	    <!--factor>1</factor-->
+	    <interpolation>
+	       <entry> <ind>0.0</ind> <dep>130</dep> </entry>
+	       <entry> <ind>0.5</ind> <dep>120</dep> </entry>
+	       <entry> <ind>1.0</ind> <dep>0</dep> </entry>
+	    </interpolation>
+	    <center>
+		    <x-m>0.247864</x-m>
+		    <y-m>-0.38416</y-m>
+		    <z-m>-0.301693</z-m>
+	    </center>
+	    <axis>
+		    <x>0.4</x>
+		    <y>-1.0</y>
+		    <z>0.2</z>
+	    </axis>
+    </animation>
+
+    <animation>
+	    <type>rotate</type>
+	    <object-name>gearright</object-name>
+	    <property>/gear/gear[2]/position-norm</property>
+	    <!--min-deg>0</min-deg-->
+	    <!--max-deg>360</max-deg-->
+	    <!--factor>1</factor-->
+	    <interpolation>
+	       <entry> <ind>0.0</ind> <dep>130</dep> </entry>
+	       <entry> <ind>0.5</ind> <dep>120</dep> </entry>
+	       <entry> <ind>1.0</ind> <dep>0</dep> </entry>
+	    </interpolation>
+	    <center>
+		    <x-m>0.247864</x-m>
+		    <y-m>0.38416</y-m>
+		    <z-m>-0.301693</z-m>
+	    </center>
+	    <axis>
+		    <x>-0.4</x>
+		    <y>-1.0</y>
+		    <z>-0.2</z>
+	    </axis>
+    </animation>
+
+<!-- pilot -->
+
+    <animation> 
+      <type>select</type>
+      <object-name>CPT-Pilot-Head</object-name>
+      <object-name>CPT-Pilot-Body</object-name>
+      <object-name>CPT-Helmet</object-name>
+      <object-name>CPT-Visor</object-name>
+      <object-name>CPT-Facemask</object-name>
+      <object-name>CPT-C-Stick</object-name>
+
+<!-- this does not work as expected
+ ... the fuselage and ailerons are not displayed on outside view
+
+      <object-name>aileronleft</object-name>
+      <object-name>aileronleft_0</object-name>
+      <object-name>aileronleft_1</object-name>
+      <object-name>aileronright</object-name>
+      <object-name>aileronright_0</object-name>
+      <object-name>aileronright_1</object-name>
+      <object-name>antenna</object-name>
+      <object-name>antennaafn</object-name>
+      <object-name>elevatorleft</object-name>
+      <object-name>elevatorleft_0</object-name>
+      <object-name>elevatorleft_1</object-name>
+      <object-name>elevatorright</object-name>
+      <object-name>elevatorright_0</object-name>
+      <object-name>elevatorright_1</object-name>
+      <object-name>engine</object-name>
+      <object-name>flapleft</object-name>
+      <object-name>flapleft_0</object-name>
+      <object-name>flapleft_1</object-name>
+      <object-name>flapright</object-name>
+      <object-name>flapright_0</object-name>
+      <object-name>flapright_1</object-name>
+      <object-name>fuselage</object-name>
+      <object-name>fuselage_0</object-name>
+      <object-name>fuselage_1</object-name>
+      <object-name>gearfront</object-name>
+      <object-name>gearfrontcover</object-name>
+      <object-name>gearfrontcover_0</object-name>
+      <object-name>gearfrontcover_1</object-name>
+      <object-name>gearleft</object-name>
+      <object-name>gearleftcover</object-name>
+      <object-name>gearright</object-name>
+      <object-name>gearrightcover</object-name>
+      <object-name>rudderll</object-name>
+      <object-name>rudderll_0</object-name>
+      <object-name>rudderll_1</object-name>
+      <object-name>rudderlu</object-name>
+      <object-name>rudderlu_0</object-name>
+      <object-name>rudderlu_1</object-name>
+      <object-name>rudderrl</object-name>
+      <object-name>rudderrl_0</object-name>
+      <object-name>rudderrl_1</object-name>
+      <object-name>rudderru</object-name>
+      <object-name>rudderru_0</object-name>
+      <object-name>rudderru_1</object-name>
+      <object-name>stabs</object-name>
+      <object-name>wings</object-name>
+      -->
+
+      <condition>
+       <not>
+       <equals>
+	<property>sim/current-view/view-number</property>
+	<value>0</value>
+       </equals>
+       </not>
+      </condition>
+    </animation>
+
+    <model> 
+      <path>Aircraft/Aircrows/Models/blackout.xml</path>
+	  <name>Blackout</name>
+      <offsets> 
+        <x-m>-1.85</x-m>
+        <y-m>0.00</y-m>
+        <z-m>0.28</z-m>
+      </offsets>
+    </model>
+
+    <animation> 
+      <type>select</type>
+      <object-name>Blackout</object-name>
+      <condition> 
+        <greater-than-equals> 
+          <property>/sim/current-view/view-number</property>
+          <value>0</value>
+        </greater-than-equals>
+      </condition>
+    </animation>
+
+<!-- instruments
+ http://home.att.net/~airplanepics/He162/images/Cockpit/InstrumentPanel/Dash.html
+ -->
+
+<!-- turnbank -->
+ <model>
+  <path>Aircraft/Aircrows/Models/he162-turn.xml</path>
+  <offsets>
+   <x-m>-2.536</x-m>
+   <y-m>-0.26</y-m>
+   <z-m> 0.046</z-m>
+  </offsets>
+ </model>
+
+<!-- airspeed -->
+ <model>
+  <path>Aircraft/Aircrows/Models/he162-asi.xml</path>
+  <offsets>
+   <x-m>-2.536</x-m>
+   <y-m>-0.13</y-m>
+   <z-m> 0.046</z-m>
+  </offsets>
+ </model>
+
+<!-- vario -->
+ <model>
+  <path>Aircraft/Aircrows/Models/he162-vario.xml</path>
+  <offsets>
+   <x-m>-2.536</x-m>
+   <y-m> 0.0</y-m>
+   <z-m> 0.046</z-m>
+  </offsets>
+ </model>
+
+<!-- compass -->
+ <model>
+  <path>Aircraft/Aircrows/Models/he162-compass.xml</path>
+  <offsets>
+   <x-m>-2.536</x-m>
+   <y-m> 0.0</y-m>
+   <z-m>-0.089</z-m>
+  </offsets>
+ </model>
+
+<!-- tacho jet rpm -->
+ <model>
+  <path>Aircraft/Aircrows/Models/he162-tacho.xml</path>
+  <offsets>
+   <x-m>-2.536</x-m>
+   <y-m> 0.26</y-m>
+   <z-m> 0.046</z-m>
+  </offsets>
+ </model>
+
+<!-- afn2 (does not work anymore, i think) -->
+ <model>
+  <path>Aircraft/Aircrows/Models/dial-60.xml</path>
+  <offsets>
+   <x-m>-2.536</x-m>
+   <y-m>-0.26</y-m>
+   <z-m>-0.089</z-m>
+  </offsets>
+ </model>
+
+<!-- altimeter -->
+ <model>
+  <path>Aircraft/Aircrows/Models/he162-alt.xml</path>
+  <offsets>
+   <x-m>-2.536</x-m>
+   <y-m>-0.13</y-m>
+   <z-m>-0.089</z-m>
+  </offsets>
+ </model>
+
+<!-- jetpipethermo egt-degf -->
+ <model>
+  <path>Aircraft/Aircrows/Models/he162-egt.xml</path>
+  <offsets>
+   <x-m>-2.536</x-m>
+   <y-m> 0.09</y-m>
+   <z-m> 0.066</z-m>
+  </offsets>
+ </model>
+
+<!-- oilpressure oilp-norm -->
+ <model>
+  <path>Aircraft/Aircrows/Models/he162-press.xml</path>
+  <offsets>
+   <x-m>-2.536</x-m>
+   <y-m> 0.09</y-m>
+   <z-m>-0.011</z-m>
+  </offsets>
+ </model>
+
+<!-- clock -->
+ <model>
+  <path>Aircraft/Aircrows/Models/he162-clock.xml</path>
+  <offsets>
+   <x-m>-2.536</x-m>
+   <y-m> 0.09</y-m>
+   <z-m>-0.088</z-m>
+  </offsets>
+ </model>
+
+<!-- burner pressure -->
+ <model>
+  <!--
+  <path>Aircraft/Aircrows/Models/he162-press.xml</path>
+  -->
+  <path>Aircraft/Aircrows/Models/dial-60.xml</path>
+  <offsets>
+   <x-m>-2.536</x-m>
+   <y-m> 0.17</y-m>
+   <z-m> 0.066</z-m>
+  </offsets>
+ </model>
+
+<!-- fuelpressure -->
+ <model>
+  <!--
+  <path>Aircraft/Aircrows/Models/he162-press.xml</path>
+  -->
+  <path>Aircraft/Aircrows/Models/dial-60.xml</path>
+  <offsets>
+   <x-m>-2.536</x-m>
+   <y-m> 0.17</y-m>
+   <z-m>-0.011</z-m>
+  </offsets>
+ </model>
+
+<!-- fuel (only shows first central tank!) /consumables/fuel/tank/level-gal_us -->
+ <model>
+  <path>Aircraft/Aircrows/Models/he162-fuel.xml</path>
+  <offsets>
+   <x-m>-2.536</x-m>
+   <y-m> 0.17</y-m>
+   <z-m>-0.088</z-m>
+  </offsets>
+ </model>
+
+<!-- replaced the fuelpressure and burner pressure with addition fuel gauges
+ <model>
+  <path>Aircraft/Aircrows/Models/he162-fuel-1.xml</path>
+  <offsets>
+   <x-m>-2.536</x-m>
+   <y-m> 0.17</y-m>
+   <z-m> 0.066</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/Aircrows/Models/he162-fuel-2.xml</path>
+  <offsets>
+   <x-m>-2.536</x-m>
+   <y-m> 0.17</y-m>
+   <z-m>-0.011</z-m>
+  </offsets>
+ </model>
+-->
+
+</PropertyList>

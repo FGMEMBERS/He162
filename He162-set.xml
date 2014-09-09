@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+
+<!--
+
+    Role 		Fighter
+    Crew 		One, pilot
+    First Flight 	6 December 1944
+    Manufacturer 	Heinkel
+Dimensions
+    Length 		9.05 m 		29 ft 8 in
+    Wingspan 		7.2 m 		23 ft 7 in
+    Height 		2.6 m 		8 ft 6 in
+    Wing area 		14.5 m2 	156 ft2
+Weights
+    Empty 		1,660 kg 	3,660 lb
+    Maximum takeoff	2,800 kg 	6,180 lb
+Powerplant
+    Engines 		1x BMW 003E-1 or E-2 turbojet
+    Thrust 		800 kgf 	7.85 kN 	1,760 lbf
+Performance
+    Maximum speed 	900 km/h 	562 mph
+    Maximum range 	975 km 		606 miles
+    Service ceiling	12,000 m 	39,400 ft
+    Rate of climb 	1405 m/min 	4615 ft/min
+Armament
+    Guns 		2x 20mm MG 151, 120 rounds each
+
+BMW 003
+    * Length: 3.53 m (11 ft 7 in)
+    * Diameter: 690 mm (27 in)
+    * Weight: 562 kg (1,240 lb)
+    * Thrust: 800 kgf (7.8 kN, 1,760 lbf)
+    * Maximum rpm: 9,500
+    * Fuel consumption: 1.31 kg/(km/h)
+
+Engine controlls
+    * Nozzle A-H-S-F
+    * Throttle
+    * Donkey starter engine
+    * Rope to start the donkey
+
+Instructions:
+    * pull the cord to start the donkey engine
+    * jet lever Aktiv (A)
+    * open fuel clock
+    * inject and ignite
+    * disengage donkey engine
+    * taxi
+    * kick the brakes for turns
+    * hold the brakes
+    * flaps 20 degree
+    * jet lever Start (S)
+
+"Wings of the Luftwaffe" by Captain Eric Brown, CBE, DSC, AFC, RN.
+    lift nose at: 170km/h  92knots 105mph 9500 rpm full throttle
+    take off at:  190km/h 103knots 118mph 9500 rpm
+    climb at:     346km/h 187knots 215mph 9200 rpm
+    cruise at:    483km/h 261knots 300mph 8900 rpm
+    powered dive: 644km/h 347knots 400mph ???? rpm
+    stall at:     160km/h  86knots 100mph ???? rpm ??? aoa
+    approach:     200km/h 108knots 125mph 3000 rpm idle throttle
+    touchdown:    170km/h  92knots 105mph 3000 rpm idle throttle
+
+--> 
+
+<PropertyList>
+ <sim>
+  <description>Heinkel 162 - Salamander alias Volksjaeger</description>
+  <author>Michael Koehne</author>
+
+  <flight-model>yasim</flight-model>
+  <aero>He162-yasim</aero>
+
+  <fuel-fraction>1</fuel-fraction>
+
+  <sound>
+      <!--audible>true</audible-->
+      <path>Aircraft/He162/Models/jet-sound.xml</path>
+  </sound>
+
+  <panel>
+   <visibility archive="n">false</visibility>
+  </panel>
+
+  <model>
+   <path archive="y">Aircraft/He162/Models/He162.xml</path>
+  </model>
+
+  <view>
+   <internal archive="y">true</internal>
+   <config>
+     <x-offset-m archive="y">0.0</x-offset-m>
+     <y-offset-m archive="y">0.25</y-offset-m>
+     <z-offset-m archive="y">-1.85</z-offset-m>
+     <pitch-offset-deg>-2</pitch-offset-deg> <!-- -2/-8 -->
+   </config>
+  </view>
+
+  <submodels>
+   <serviceable>true</serviceable>
+   <path>Aircraft/He162/He162-submodels.xml</path>
+  </submodels>
+
+  <help>
+    <title>Heinkel 162A</title>
+    <line>Maximum dive speed : 900 km/h</line>
+    <line>Cruise speed : 400-500 km/h</line>
+    <line>Maneuvering speed : 400-650 km/h</line>
+    <line>Unpowered glide: 320 km/h</line>
+    <line>Stall speed : 160 km/h clean</line>
+    <line>Stall speed : 140 km/h with gear and full flaps</line>
+    <line>Initial approach speed : 300 km/h to extract gear</line>
+    <line>Final approach speed : 200 km/h with gear and full flaps</line>
+    <line>Touchdown speed : 170 km/h</line>
+    <line>Takeoff speed : 190 km/h</line>
+    <key><name>ctrl-d</name><desc>look down</desc></key>
+    <key><name>ctrl-u</name><desc>look up</desc></key>
+    <key><name>ctrl-a</name><desc>engine nozzle A (An = On) for taxi and landing</desc></key>
+    <key><name>ctrl-s</name><desc>engine nozzle S (Start) for takeoff and climb</desc></key>
+    <key><name>ctrl-h</name><desc>engine nozzle H (Hoch = High) for altitude above 8000m</desc></key>
+    <key><name>ctrl-f</name><desc>engine nozzle F (Flug = Flight) for high G flight</desc></key>
+  </help>
+
+ </sim>
+
+ <yasim>
+  <he162> <pilot-lb>128</pilot-lb> </he162> <!-- i'm thin -->
+ </yasim>
+
+ <controls>
+  <gear> <brake-parking>1</brake-parking> </gear>
+  <armament>
+      <trigger type="bool">false</trigger>
+      <gunsight>
+	  <power-on type="bool">false</power-on>
+          <intensity type="double">0.5</intensity>
+     </gunsight>
+  </armament>
+  <!--
+  <flight> <flaps>0.3</flaps> </flight>
+   -->
+ </controls>
+
+ <input>
+  <keyboard>
+     <key n="4">
+        <name>ctrl-d</name>
+        <desc>Adjust view down</desc>
+        <binding>
+	  <command>nasal</command>
+	  <script>he162.adjust_view_down()</script>
+        </binding>
+     </key>
+     <key n="21">
+        <name>ctrl-u</name>
+        <desc>Adjust view up</desc>
+        <binding>
+	  <command>nasal</command>
+	  <script>he162.adjust_view_up()</script>
+        </binding>
+     </key>
+     <key n="1">
+        <name>ctrl-a</name>
+        <desc>Nozzle A (An)</desc>
+        <binding>
+	  <command>nasal</command>
+	  <script>he162.engine_nozzle("A")</script>
+        </binding>
+     </key>
+     <key n="19">
+        <name>ctrl-s</name>
+        <desc>Nozzle S (Start)</desc>
+        <binding>
+	  <command>nasal</command>
+	  <script>he162.engine_nozzle("S")</script>
+        </binding>
+     </key>
+     <key n="8">
+        <name>ctrl-h</name>
+        <desc>Nozzle H (Hoch)</desc>
+        <binding>
+	  <command>nasal</command>
+	  <script>he162.engine_nozzle("H")</script>
+        </binding>
+     </key>
+     <key n="6">
+        <name>ctrl-f</name>
+        <desc>Nozzle F (Flug)</desc>
+        <binding>
+	  <command>nasal</command>
+	  <script>he162.engine_nozzle("F")</script>
+        </binding>
+     </key>
+  </keyboard>
+ </input>
+
+ <nasal>
+     <pilot><file>Aircraft/He162/pilot-g.nas</file></pilot>
+     <he162><file>Aircraft/He162/He162.nas</file></he162>
+ </nasal>
+
+</PropertyList>
