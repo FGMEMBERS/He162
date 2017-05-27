@@ -68,6 +68,16 @@ Instructions:
   <description>Heinkel 162 - Salamander alias Volksjaeger</description>
   <author>Michael Koehne</author>
 
+  <tags>
+    <tag>fighter</tag>
+    <tag>heinkel</tag>
+    <tag>1940s</tag>
+    <tag>ww2</tag>
+    <tag>retractable-gear</tag>
+    <tag>jet</tag>
+    <tag>single-engine</tag>
+  </tags>
+
   <flight-model>yasim</flight-model>
   <aero>He162-yasim</aero>
 
